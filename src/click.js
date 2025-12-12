@@ -1,3 +1,5 @@
+function onLoadPagina() {
+
 let incrementarButton = document.getElementById('incrementarButton');
 
 let incremento =
@@ -28,16 +30,19 @@ incrementarButton.onclick = (event) => {
   incremento.valor++;
   localStorage.setItem('incremento', JSON.stringify(incremento));
 };
+}
 
-incrementarButton.onmouseover = (event) => {
-  incrementarButton.style.backgroundColor = 'blue';
-};
+window.onload = onLoadPagina;
 
-incrementarButton.onmouseout = (event) => {
-  incrementarButton.style.backgroundColor = 'gray';
-};
+//incrementarButton.onmouseover = (event) => {
+//  incrementarButton.style.backgroundColor = 'blue';
+//};
 
-incrementarButton.addEventListener('dblclick', (event) => {
-  console.log('Clicou no dblclick');
-});
+//incrementarButton.onmouseout = (event) => {
+//  incrementarButton.style.backgroundColor = 'gray';
+//};
+
+//incrementarButton.addEventListener('dblclick', (event) => {
+//  console.log('Clicou no dblclick');
+//});
 // callback
